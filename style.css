@@ -46,7 +46,7 @@ h6 {
         width: 70%;
     }
 }
-.section {
+section {
     padding: 16px 0;
 }
 .bg-color-1 {
@@ -74,8 +74,21 @@ a:hover {
 }
 
 /* NAVIGATION */
-
-
+.nav-menu {
+    position: relative;
+}
+.nav-list {
+    display: none;
+}
+.navigation {
+    height: 64px;
+}
+.menu-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 /* HERO SECTION */
 
 
@@ -83,6 +96,11 @@ a:hover {
 
 
 /* WHAT WE DO */
+.what-we-do-section {
+    background-color: var(--bg-color-01);
+    color: var(--font-color-inverted);
+}
+
 .what-we-do {
     text-align: center;
 }
@@ -165,7 +183,11 @@ a:hover {
 
 
 /* LOCATIONS */
-.contant-button {
+.location-section {
+    background-color: var(--bg-color-02);
+    color: var(--font-color-inverted);
+}
+.contact-button {
     display: grid;
     place-items: center;
     width: 100%;
@@ -179,14 +201,25 @@ a:hover {
     margin: 16px 0;
     
 }
-.contant-button a {
+.contact-button a {
     text-decoration: none;
     box-shadow: #333333;
     color: var(--font-color-normal);
 }
-@media (min-width:1200px) {
-    .contant-button {
+
+@media (min-width: 1200px) {
+    .contact-button {
         width: 25%;
+    }
+    .location-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .location-header {
+        flex-basis: 30%;
+    }
+    .location-text {
+        flex-basis: 65%;
     }
 }
 
@@ -247,7 +280,10 @@ a:hover {
     margin: 16px 0;
 }
 /* FOOTER */
-
+.footer {
+    background-color: var(--bg-color-03);
+    color: var(--font-color-inverted);
+}
 .footer-gallery {
     display: flex;
     flex-direction: column;
