@@ -50,6 +50,9 @@ p {
   font-size: 16px;
   margin: 16px 0;
 }
+.justified-p {
+  text-align: justify;
+}
 
 h1 {
   font-size: 64px;
@@ -314,7 +317,7 @@ a:hover {
   }
 
   .location-header {
-    flex-basis: 20%;
+    flex-basis: 15%;
   }
 
   .location-text {
