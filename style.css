@@ -7,6 +7,7 @@
   --anchor-hover: #e9877b;
   --font-color-normal: #000;
   --font-color-inverted: #fff;
+  --gallery-gap: 16px;
 }
 
 * {
@@ -171,15 +172,22 @@ a:hover {
   flex-direction: column;
 }
 
+.about-us-img img {
+  border-radius: 8px;
+}
+
 @media (min-width: 768px) {
   .about-us {
     flex-direction: row;
     justify-content: space-between;
     gap: 16px;
   }
-}
-.about-us-img img {
-  border-radius: 8px;
+  .about-us-img {
+    flex-basis: 40%;
+  }
+  .about-us-text {
+    flex-basis: 50%;
+  }
 }
 
 /* WHAT WE DO */
@@ -242,10 +250,13 @@ a:hover {
 
 .gallery-descr {
   display: grid;
-  aspect-ratio: 4/1;
+  aspect-ratio: 5/1;
   height: 100%;
   text-align: center;
   place-items: center;
+}
+.gallery-descr h2 {
+  padding-top: 16px;
 }
 
 @media (min-width: 768px) {
@@ -256,7 +267,7 @@ a:hover {
   }
 
   .img-wrapper {
-    flex-basis: calc(50% - 8px);
+    flex-basis: calc(50% - var(--gallery-gap)/2);
   }
 
   .gallery-descr {
@@ -270,13 +281,12 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch;
   }
 
   .img-wrapper,
   .gallery-descr {
-    max-width: calc(100% / 3 - 13px);
-    aspect-ratio: 1;
+    flex-basis: calc(100% / 3 - 2*var(--gallery-gap)/3);
+    aspect-ratio: 1/1;
   }
 }
 
